@@ -1,0 +1,491 @@
+body {
+    background-color: azure;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li{
+    margin: 10px 0;
+}
+
+
+
+/* . Below are the controls of the header elements. */
+
+/* . Notification */
+
+#notification-section {
+    grid-area: notification;
+}
+
+#notification-text {
+    background-color: bisque;
+    text-align: center;
+    color: #c9b661;
+    margin-bottom: auto;
+    font-family: 'Monostone';
+    font-style: italic;
+    font-variant: normal;
+}
+
+/* . Logo image  */
+
+#logo-inside-header {
+    grid-area: header-logo;
+    flex: 1;
+}
+
+#logo-image {
+    width: auto relative;
+    padding: 5%;
+    margin-right: 2%;
+}
+
+/* . Sign up/ sign in button */
+
+#log-in-button {
+    grid-area: login-button;
+    flex: 1;
+}
+
+#sign-in-button {
+    font-size: large;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #e2fa07;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-color: #1a57a1;
+    margin-top: 1em;
+}
+
+#sign-in-button:hover {
+    background-color: rgb(0, 183, 255);
+    color: rgb(230, 255, 0);
+    cursor: pointer;
+}
+
+#account-button {
+    text-decoration: none;
+}
+
+#account-button:hover {
+    color: #d9ff00;
+}
+
+/* . Short logo */
+
+#short-logo {
+    font-family: Apple Chancery, cursive;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: large;
+    color: rgba(250, 120, 250, 0.7);
+    text-align: center;
+    grid-area: logo-at-bottom-header;
+}
+
+#middle-header-elements {
+    grid-area: middle-header;
+    margin-top: 1em;
+    flex: 1;
+}
+
+#first-row-middle-header {
+    display: flex;
+}
+
+/* . Language selection dropdown menu */
+
+#language-selection-menu {
+    flex: 1;
+    grid-area: language-selection;
+    height: 30px;
+    position: relative;
+    border: 1px solid #00B4CC;
+    text-align: center;
+    margin-top: 1.5%;
+    margin-left: 2%;
+}
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f8f8f4;
+    box-shadow: 1px 2px 2px 1px rgba(115, 123, 25, 0.2);
+    padding: 2%;
+    z-index: 1;
+    border: 1px solid grey;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+    cursor: pointer;
+}
+
+
+/* . FAQs */
+#frequent-asked-questions {
+    flex: 1;
+    grid-area: faqs;
+    position: relative;
+    margin-top: -2.5%;
+
+}
+
+#FAQs {
+    font-family: serif;
+    text-align: center;
+    font-variant: normal;
+}
+
+/* . Search button */
+#search-button-at-header {
+    flex: 1;
+    grid-area: search-button;
+}
+
+.search {
+    width: 200px;
+    position: relative;
+    display: flex;
+}
+  
+.searchTerm {
+    /* width: 100%; */
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+  
+.searchTerm:focus{
+    color: gray;
+}
+  
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.wrap{
+    position: relative;
+    right: 1em;
+}
+
+/* . Nevigation bars  */
+
+#list-of-navigation-options {
+    list-style: none;
+    display: flex;
+}
+
+.navigation-option {
+    display: inline-block;
+    flex: 1;
+    margin-right: 1em;     /* . Control spacing between between nav buttons. */
+    min-width: 100px;   /* . This is the control that won't allow button "folding" when narrowing screen size. */
+}
+
+.nav-button {
+    color: chartreuse;
+    border: 1px solid salmon;
+    border-radius: 30%;
+    font-size: 1em;
+    text-decoration: none;
+    font-variant: normal;
+    font-weight: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    padding: 10px;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(255, 0, 190);
+    border-style: dotted;
+    background-color: #d9ff00;
+}
+
+.nav-button:active {
+    color: #1a57a1;
+}
+
+/* . Control of the video below short-logo. */
+#video-section {
+    padding: 1em;
+    border: 2px dotted hotpink;
+    background-color: rgb(230, 255, 0);
+    border-radius: 20%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-area: vsection;
+    grid-template-areas: 
+    "svideo svideo vdescription vdescription vdescription vdescription"
+}
+
+#short-video {
+    flex: 1;
+    grid-area: svideo;
+    margin-left: 2em;
+}
+
+#video-description {
+    flex: 1;
+    grid-area: vdescription;
+    text-align: center;
+    padding: 1em;
+    background-color: darkorange;
+    margin-right: 5em;
+}
+
+/* . Control of the positioning of header. */
+
+#header-container {
+    float: right;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 
+    "notification notification notification notification notification notification"
+    "header-logo middle-header middle-header middle-header middle-header login-button"
+    "header-logo nav nav nav nav login-button"
+    "logo-at-bottom-header logo-at-bottom-header logo-at-bottom-header logo-at-bottom-header logo-at-bottom-header logo-at-bottom-header"
+    "vsection vsection vsection vsection vsection vsection"
+    ;
+    grid-area: header-section;
+}
+
+
+/* . Below are the controls of the body contents. */
+
+#main-body-contents {
+    grid-area: body-contents;
+}
+
+.main-content-in-body-section {
+    display: flex;
+    margin-top: 20px;
+    border: 2px dashed wheat;
+    border-radius: 30px;
+    background-color: rgba(230, 255, 0, 0.1);
+}
+
+.image-in-body-section {
+    border-radius: 15%;
+}
+
+.object-in-body-section .image-in-body-section {
+    flex: 1;
+    color: rgb(90, 91, 86);
+    font-family: monospace;
+}
+
+.list-option {
+    font-family: serif;
+    font-size: 20px;
+    color: rgba(115, 123, 225, 0.8);
+    margin-left: 10em;
+}
+
+.list-option:hover {
+    color: plum;
+    cursor: pointer;
+    font-weight: bold;
+    font-variant: normal;
+    font-size: 20.3px;
+}
+
+
+/* . Below are the controls of the footer elements. */
+
+#footer-section-elements {
+    grid-area: footer-part;
+}
+
+#notification-before-footer {
+    text-align: center;
+    background-color: rgb(73, 161, 120);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #d9ff00;
+    margin-top: 10px;
+}
+
+.footer-section {
+    display: flex;
+    margin: auto;
+    background-color: antiquewhite;
+}
+
+#footer-image {
+    width: 35%;
+}
+
+.footer-section-list-of-objects {
+    flex: 1;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: grey;
+}
+
+.footer-list:hover {
+    cursor: pointer;
+    color: #c817d8;
+}
+
+address {
+    font-style: italic;
+}
+
+/* . Below are the differences of the navigation pages compared with the home page. */
+
+.main-nav-section {
+    display: flex;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color: lightgoldenrodyellow;
+}
+
+.body-image {
+    width: 35%;
+    height: 15em;
+    border-radius: 10%;
+}
+
+.body-content-description {
+    margin-left: 4em;
+    color: deeppink;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: large;
+}
+
+.click-for-more-detail-button-at-nav-page {
+    font-size: large;
+    padding: 25px;
+    border-radius: 6px;
+    background-color: #1fc13a;
+    border: none;
+    color: rgb(188, 31, 31);
+    text-decoration: none;
+    display: inline-block;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.click-for-more-detail-button-at-nav-page:hover {
+    cursor: pointer;
+    background-color: chartreuse;
+    color: darkorchid;
+    font-style: italic;
+    font-weight: bold;
+    font-size: large;
+    font-family: serif;
+}
+
+
+
+
+/* . Below are the controls of the position of the whole page contents.*/
+
+
+#main-page-container {
+    float: left;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 
+    "header-section header-section header-section header-section header-section header-section"
+    "body-contents body-contents body-contents body-contents body-contents body-contents"
+    "footer-part footer-part footer-part footer-part footer-part footer-part"
+    ;
+}
+
+
+/* . Below is the css styling for account page. */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 2%;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
